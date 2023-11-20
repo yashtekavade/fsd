@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Font Awesome CDN  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Student Registration Form</title>
+  </head>
+
+  <body>
+    <div class="main">
+      <h2 id="form-heading" class="form-heading">Student Registration Form</h2>
+      <div class="signup">
+        <form id="registrationForm" onsubmit="return validateForm()">
+          <label for="username" class="form-label">Username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Username"
+            required
+          />
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+
+          <label for="phone">Phone number</label>
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            placeholder="Phone number"
+            pattern="[0-9]{10}"
+            required
+          />
+
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+            pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[@$#&]).{7,}$"
+            required
+          />
+
+          <label for="confirmPassword">Confirm Password</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            placeholder="Confirm Password"
+            required
+          />
+
+          <button type="submit" id="submit-button">Sign up</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
