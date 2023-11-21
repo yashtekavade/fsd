@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>  
+    <link rel="stylesheet" href="styles.css" />
+    
+</head>
+<body>
+
+<?php include 'file.php';?>
+
+<!-- HTML form -->
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+    <label for="employee_name">Employee Name:</label>
+    <input type="text" name="employee_name" required><br>
+
+    <label for="employee_id">Employee ID:</label>
+    <input type="text" name="employee_id" required><br>
+
+    <label for="department_name">Department Name:</label>
+    <input type="text" name="department_name" required><br>
+
+    <label for="phone_number">Phone Number:</label>
+    <input type="text" name="phone_number" required><br>
+
+    <label for="joining_date">Joining Date:</label>
+    <input type="date" name="joining_date" required><br>
+
+    <input type="submit" value="Insert Employee">
+</form>
+
+<!-- JavaScript for additional client-side validation -->
+<script src="scripts.js"></script>
+
+</body>
+</html>
