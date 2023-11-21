@@ -1,11 +1,25 @@
-document.querySelector("form").addEventListener("submit", function (event) {
-  let phoneNumber = document.querySelector('[name="phone_number"]').value;
-  if (!isValidPhoneNumber(phoneNumber)) {
-    alert("Invalid phone number format. Please use only digits.");
-    event.preventDefault();
-  }
-});
+function validateForm(action) {
+  // Get form fields based on the action
+  var employeeName = document.forms[`${action}Form`].elements["employee_name"];
+  var employeeID = document.forms[`${action}Form`].elements["employee_id"];
+  var departmentName =
+    document.forms[`${action}Form`].elements["department_name"];
+  var phoneNumber = document.forms[`${action}Form`].elements["phone_number"];
+  var joiningDate = document.forms[`${action}Form`].elements["joining_date"];
 
-function isValidPhoneNumber(phoneNumber) {
-  return /^\d+$/.test(phoneNumber);
+  // Check if the required fields are not empty
+  if (
+    !employeeName.value ||
+    !employeeID.value ||
+    !departmentName.value ||
+    !phoneNumber.value ||
+    !joiningDate.value
+  ) {
+    alert("All fields must be filled out");
+    return false;
+  }
+
+  // You can add more specific validation rules here if needed
+
+  return true;
 }

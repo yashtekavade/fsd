@@ -1,38 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Management System</title>  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Management System</title>
     <link rel="stylesheet" href="styles.css" />
-    
-</head>
-<body>
+  </head>
+  <body>
+    <!-- Heading -->
+    <div class="container">
+      <h1 class="heading">Employee Management System</h1>
 
-<?php include 'file.php';?>
+      <!-- Insert Employee Record Form -->
+      <div class="form-section">
+        <h2>Insert Employee Record</h2>
+        <form onsubmit="return validateForm('insert')">
+          <label for="employee_name">Employee Name:</label>
+          <input type="text" name="employee_name" required /><br />
 
-<!-- HTML form -->
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-    <label for="employee_name">Employee Name:</label>
-    <input type="text" name="employee_name" required><br>
+          <label for="employee_id">Employee ID:</label>
+          <input type="text" name="employee_id" required /><br />
 
-    <label for="employee_id">Employee ID:</label>
-    <input type="text" name="employee_id" required><br>
+          <label for="department_name">Department Name:</label>
+          <input type="text" name="department_name" required /><br />
 
-    <label for="department_name">Department Name:</label>
-    <input type="text" name="department_name" required><br>
+          <label for="phone_number">Phone Number:</label>
+          <input type="text" name="phone_number" required /><br />
 
-    <label for="phone_number">Phone Number:</label>
-    <input type="text" name="phone_number" required><br>
+          <label for="joining_date">Joining Date:</label>
+          <input type="date" name="joining_date" required /><br />
 
-    <label for="joining_date">Joining Date:</label>
-    <input type="date" name="joining_date" required><br>
+          <input type="submit" value="Insert Employee" />
+        </form>
+      </div>
 
-    <input type="submit" value="Insert Employee">
-</form>
+      <!-- Delete Employee Record Form -->
+      <div class="form-section">
+        <h2>Delete Employee Record</h2>
+        <form onsubmit="return validateForm('delete')">
+          <label for="delete_employee_id">Employee ID to Delete:</label>
+          <input type="text" name="delete_employee_id" required /><br />
+          <input type="submit" value="Delete Employee" />
+        </form>
+      </div>
 
-<!-- JavaScript for additional client-side validation -->
-<script src="scripts.js"></script>
+      <!-- Update Employee Record Form -->
+      <div class="form-section">
+        <h2>Update Employee Record</h2>
+        <form onsubmit="return validateForm('update')">
+          <label for="update_employee_id">Employee ID to Update:</label>
+          <input type="text" name="update_employee_id" required /><br />
 
-</body>
+          <label for="updated_department_name">Updated Department Name:</label>
+          <input type="text" name="updated_department_name" required /><br />
+
+          <label for="updated_phone_number">Updated Phone Number:</label>
+          <input type="text" name="updated_phone_number" required /><br />
+          <input type="submit" value="Update Employee" />
+        </form>
+      </div>
+
+      <!-- Display Employee Records -->
+      <div class="form-section">
+        <h2>Display Employee Records</h2>
+        <button onclick="displayEmployeeRecords()">
+          Display Employee Records
+        </button>
+        <div id="employeeRecords"></div>
+      </div>
+    </div>
+
+    <!-- JavaScript for additional client-side validation and display -->
+    <script src="scripts.js"></script>
+  </body>
 </html>

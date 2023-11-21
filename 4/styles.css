@@ -11,8 +11,19 @@ body {
 
 .container {
   text-align: center;
-  width: 80%; /* Adjust the width as needed */
-  max-width: 600px; /* Set a max-width for better readability on larger screens */
+  width: 60%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.heading {
+  color: #e1bee7;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form-section {
+  margin-bottom: 30px;
 }
 
 form {
@@ -24,46 +35,49 @@ form {
   box-sizing: border-box;
 }
 
-.box-heading {
-  color: #e1bee7; /* Light purple heading text */
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
 label {
   display: block;
   color: #573b8a;
   font-size: 1.2em;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 input {
   width: calc(100% - 12px);
-  height: 30px;
+  height: 40px;
   margin-bottom: 15px;
-  padding: 5px;
+  padding: 10px;
   box-sizing: border-box;
-  border: 1px solid #573b8a; /* Purple border for input */
-  border-radius: 5px;
+  border: 1px solid #573b8a;
+  border-radius: 8px;
+  font-size: 1em;
 }
 
 input[type="date"] {
-  /* Additional styling for date input if needed */
+  height: 40px;
 }
 
+input[type="submit"],
 button {
   width: 100%;
-  height: 40px;
+  height: 50px;
   color: #fff;
   background: #573b8a;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: bold;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s ease-in-out;
 }
 
+input[type="submit"]:hover,
 button:hover {
   background: #6d44b8;
+}
+
+#employeeRecords {
+  margin-top: 20px;
+  color: #573b8a;
+  font-size: 1.2em;
 }

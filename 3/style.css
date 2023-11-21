@@ -5,11 +5,11 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  font-family: "Arial", sans-serif;
-  background: linear-gradient(to bottom, #6c5b7b, #4d394b, #6c5b7b);
+  font-family: "Jost", sans-serif;
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
 }
 
-form {
+.main {
   width: 350px;
   height: auto;
   background: #fff;
@@ -22,7 +22,7 @@ form {
 
 .form-heading {
   text-align: center;
-  color: #e1bee7; /* Light purple heading text */
+  color: #573b8a;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -40,12 +40,6 @@ input {
   margin-bottom: 15px;
   padding: 5px;
   box-sizing: border-box;
-  border: 1px solid #573b8a; /* Purple border for input */
-  border-radius: 5px;
-}
-
-input[type="date"] {
-  /* Additional styling for date input if needed */
 }
 
 button {
