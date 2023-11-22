@@ -1,9 +1,24 @@
+if (window.jQuery) {
+  // jQuery is loaded
+  $(document).ready(function () {
+    $("#registrationForm").on("submit", function (event) {
+      event.preventDefault(); // Prevent the default form submission
+      if (validateForm()) {
+        // If validation passes
+        alert("Form has been submitted successfully!");
+      }
+    });
+  });
+} else {
+  // jQuery is not loaded
+  console.error("jQuery is not loaded.");
+}
 function validateForm() {
-  var username = document.getElementById("username").value;
-  var email = document.getElementById("email").value;
-  var phone = document.getElementById("phone").value;
-  var password = document.getElementById("password").value;
-  var confirmPassword = document.getElementById("confirmPassword").value;
+  var username = $("#username").val();
+  var email = $("#email").val();
+  var phone = $("#phone").val();
+  var password = $("#password").val();
+  var confirmPassword = $("#confirmPassword").val();
 
   // Regular expressions for validation
   var usernameRegex = /^[a-zA-Z0-9]+$/;
@@ -42,14 +57,5 @@ function validateForm() {
   }
 
   // If all validations pass, you can submit the form
-  alert("Form has been submitted successfully!");
   return true;
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-  var form = document.getElementById("registrationForm");
-  form.addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent the default form submission
-    validateForm(); // Call your validation function
-  });
-});
