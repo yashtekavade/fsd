@@ -1,0 +1,18 @@
+/* src/index.css */
+
+/* Reset some default styles */
+body,
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply some global styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #e0e3eb;
+}
+
+/* Add more global styles as needed */
