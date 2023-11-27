@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(to bottom, #6c5b7b, #4d394b, #6c5b7b);
+}
+
+.App {
+  width: 200%;
+  margin-left: -45%;
+}
+
+.container {
+  text-align: center;
+  width: 150%; /* Adjust as needed */
+  max-width: 80%; /* Adjust as needed */
+  margin: 20px auto;
+}
+
+.heading {
+  color: #e1bee7;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form-section {
+  margin-bottom: 30px;
+}
+
+form {
+  display: inline-block;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 5px 20px 50px #000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  color: #573b8a;
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+
+input {
+  width: calc(100% - 12px);
+  height: 40px;
+  margin-bottom: 15px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #573b8a;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+input[type="date"] {
+  height: 40px;
+}
+
+input[type="submit"],
+button {
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  background: #573b8a;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover,
+button:hover {
+  background: #6d44b8;
+}
+
+#employeeRecords {
+  margin-top: 20px;
+  color: #573b8a;
+  font-size: 1.2em;
+}
