@@ -1,7 +1,8 @@
 const { MongoClient } = require("mongodb");
 
 const Db =
-  process.env.ATLAS_URI || "mongodb://localhost:27017/your-database-name";
+  process.env.ATLAS_URI ||
+  "mongodb+srv://1234:<password>@cluster0.oahhxv2.mongodb.net/?retryWrites=true&w=majority";
 
 const client = new MongoClient(Db, {
   useNewUrlParser: true, // Remove this line

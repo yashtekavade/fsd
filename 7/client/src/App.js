@@ -3,16 +3,19 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000; // Update the port if needed
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect("YOUR_MONGODB_CONNECTION_URI", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  "mongodb+srv://1234:<password>@cluster0.oahhxv2.mongodb.net/?retryWrites=true&w=majority",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 
 // Create Mongoose model
 const Employee = mongoose.model("Employee", {

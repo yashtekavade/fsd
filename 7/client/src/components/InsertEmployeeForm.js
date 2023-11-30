@@ -20,7 +20,7 @@ function InsertEmployeeForm() {
     try {
       // Send data to the server
       const response = await axios.post(
-        "http://localhost:3000/saveData",
+        "http://localhost:5000/saveData", // Update the URL to your backend server
         employeeData
       );
       console.log(response.data);
